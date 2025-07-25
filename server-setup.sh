@@ -59,7 +59,7 @@ run_ssh "apt install -y curl nginx ufw snapd uuid"
 # 6. Настройка UFW
 ################################################
 echo "${GREEN}[STEP] Настройка UFW...${NC}"
-run_ssh "ufw allow ssh && ufw allow http && ufw allow https && ufw enable"
+run_ssh "ufw allow ssh && ufw allow http && ufw allow https && ufw allow 8443/tcp && ufw enable"
 run_ssh "ufw status"
 
 ################################################
